@@ -7,10 +7,8 @@ export default function useHooks(currency) {
 
     async function getUser() {
         try {
-            console.log(currency);
-          // const response = await axios.get(`https://api.currencyapi.com/v3/latest?apikey=cur_live_rF23XJo19jWNmr86nb0jKjq29gjNBNnLtAudH9XA&base_currency=${currency}`);
+           const response = await axios.get(`https://api.currencyapi.com/v3/latest?apikey=cur_live_rF23XJo19jWNmr86nb0jKjq29gjNBNnLtAudH9XA&base_currency=${currency}`);
           setData(response.data.data)
-          console.log(response.data.data);
         } catch (error) {
           console.error(error);
         }
